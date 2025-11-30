@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Adisa</title>
+
+<!-- Font romantis -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background: linear-gradient(135deg, #ffdee9, #ffb3c6);
+        font-family: 'Playfair Display', serif;
+    }
+
+    .page {
+        width: 100%;
+        height: 100vh;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 30px;
+        text-align: center;
+        animation: fadeIn 1.2s ease;
+        color: #7a0033;
+        box-sizing: border-box;
+    }
+
+    .page.active {
+        display: flex;
+    }
+
+    h1 {
+        font-family: 'Great Vibes', cursive;
+        font-size: 55px;
+        margin: 0 0 20px;
+    }
+
+    p {
+        font-size: 22px;
+        line-height: 1.6;
+        max-width: 750px;
+        margin: 0 auto;
+    }
+
+    button {
+        margin-top: 35px;
+        padding: 14px 30px;
+        font-size: 18px;
+        border: none;
+        border-radius: 25px;
+        background: #ff4d6d;
+        color: white;
+        cursor: pointer;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+
+    button:hover {
+        transform: scale(1.08);
+        background: #d6336c;
+    }
+
+    .flower, .heart {
+        position: fixed;
+        top: -10px;
+        animation: fall 6s linear infinite;
+        opacity: 0.8;
+    }
+
+    @keyframes fall {
+        0% { transform: translateY(-10px) rotate(0deg); }
+        100% { transform: translateY(110vh) rotate(360deg); }
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(15px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 600px) {
+        h1 { font-size: 36px; padding: 0 10px; }
+        p { font-size: 18px; line-height: 1.5; max-width: 90%; }
+        .page { padding: 20px; height: 100vh; }
+        button { padding: 12px 24px; font-size: 16px; }
+        .heart, .flower { font-size: 18px !important; }
+    }
+</style>
+
+</head>
+<body>
+
+<!-- Musik -->
+<audio id="music" loop>
+    <source src="lagu.mp3" type="audio/mpeg">
+</audio>
+
+<div class="page active" id="p1">
+    <h1>Haiii</h1>
+    <p>
+        dibaca pelan-pelan yaa…  
+        enjoy every word, karena semuanya aku tulis dari hati 💗  
+        just relax and feel the moment.
+    </p>
+    <button onclick="nextPage(2); startMusic();">Start</button>
+</div>
+
+
+<div class="page" id="p2">
+    <h1>Hai Disaaa… ❤️</h1>
+    <p>
+       Congratulations yaa sudah selesai UTS-nya!  
+       aku tau itu ga gampang, but you did it beautifully.  
+       kamu hebat banget dan aku bangga sama kamu.  
+       btw, I prepared a little something for you…  
+       tapi sebelum itu, baca dulu pesan yang aku siapin ini yaa 🌷
+    </p>
+    <button onclick="nextPage(3)">Next</button>
+</div>
+
+<div class="page" id="p3">
+    <h1>For Disaaa</h1>
+    <p>
+      makasih ya sudah mau kenal sama aku.  
+      mungkin aku agak aneh dan random,  
+      but you still choose to talk with me.  
+      aku ngerasa dihargai dan didengerin,  
+      and that feeling… is really warm for me.  
+      thank you for being that person.
+    </p>
+    <button onclick="nextPage(4)">Next</button>
+</div>
+
+
+<div class="page" id="p4">
+    <h1>You are the best</h1>
+    <p>
+      aku sering lihat kamu ceria, penuh energi,  
+      dan itu selalu bikin suasana jadi lebih hidup.  
+      kalau lagi capek atau sedih, please remember…  
+      it's okay to slow down.  
+      take a break, breathe, and rest a bit.  
+      kamu pantas buat bahagia dan tenang selalu 💗
+    </p> 
+    <button onclick="nextPage(5)">Next</button>
+</div>
+
+
+<div class="page" id="p5">
+    <h1>My feelings</h1>
+    <p>
+      jujur… aku nyaman banget kalau sama kamu.  
+      ada rasa aman dan tenang yang ga bisa aku jelasin.  
+      kalau kamu ada masalah, cerita aja ya?  
+      I might not be perfect,  
+      but I’ll always try to be there for you.  
+      because you matter to me.
+    </p>
+    <button onclick="nextPage(6)">Next</button>
+</div>
+
+
+<div class="page" id="p6">
+    <h1>Disaa Cantik</h1>
+    <p>
+       aku gatau ini alay atau engga haha…  
+       but honestly, I made this with all sincerity.  
+       dan setelah ini… ada hadiah kecil spesial buat kamu 💝  
+       nothing big, but it’s from me, truly.
+    </p>
+    <button onclick="nextPage(7)">Next</button>
+</div>
+
+<div class="page" id="p7">
+    <h1>Thanks</h1>
+    <p>
+        aku bersyukur bisa kenal dan dekat sama kamu.  
+        walau kadang aku takut, takut terlalu dekat,  
+        karena aku orangnya random, aneh,  
+        dan kadang ga ngerti diri sendiri haha…  
+        tapi kamu tetap di situ, tetap ngobrol,  
+        tetap jadi kamu yang hangat.  
+        and I appreciate that more than you know.
+    </p>
+    <button onclick="nextPage(8)">Next</button>
+</div>
+
+<div class="page" id="p8">
+   <h1>ADISA 💓💓</h1>
+    <p>
+        I have a gift for you…  
+        something simple, but filled with meaning.  
+        I hope when you see it later, you will like it.
+    </p>
+    <button onclick="nextPage(9)">Next</button>
+</div>
+
+<div class="page" id="p9">
+    <h1>FIND MEE</h1>
+</div>
+
+<script>
+    function nextPage(n) {
+        document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+        document.getElementById('p' + n).classList.add('active');
+    }
+
+    /* =====================
+       MUSIC START ON CLICK
+       ===================== */
+    function startMusic() {
+        document.getElementById("music").play();
+    }
+
+    function createFall() {
+        const el = document.createElement('div');
+        el.classList.add(Math.random() > 0.5 ? 'heart' : 'flower');
+        el.innerHTML = Math.random() > 0.5 ? "💖" : "🌸";
+        el.style.left = Math.random() * 100 + "vw";
+        el.style.fontSize = (20 + Math.random() * 25) + "px";
+        el.style.animationDuration = (5 + Math.random() * 5) + "s";
+        document.body.appendChild(el);
+
+        setTimeout(() => el.remove(), 7000);
+    }
+
+    setInterval(createFall, 500);
+</script>
+
+</body>
+</html>
